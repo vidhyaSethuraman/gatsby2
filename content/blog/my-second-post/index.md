@@ -1,6 +1,7 @@
 ---
 title: hello
-image: img/promotion-banner.jpg
+date: 2015-05-01T22:12:03.284Z
+description: hello world
 ---
 
 Wow! I love blogging so much already.
