@@ -18,3 +18,4 @@ collections:
       preview: false
     fields:
       - { label: 'image', name: 'image', widget: image }
+      - { label: 'Title', name: 'title', widget: 'string' }

@@ -1,5 +1,5 @@
 ---
-
+title: hello
 image: img/promotion-banner.jpg
 ---
 

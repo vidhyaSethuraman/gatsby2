@@ -28,13 +28,14 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark {
       nodes {
         excerpt
         fields {
           slug
         }
         frontmatter {
+          title
           image
         }
       }
