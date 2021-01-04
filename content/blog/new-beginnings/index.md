@@ -2,6 +2,7 @@
 title: hello
 date: 2015-05-01T22:12:03.284Z
 description: hello world
+image : img/promotion-banner.jpg
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

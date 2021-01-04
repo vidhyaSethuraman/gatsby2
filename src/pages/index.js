@@ -9,19 +9,7 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+ 
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -38,6 +26,7 @@ const BlogIndex = ({ data, location }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
+                <img src={post.frontmatter.image} alt="alt"/>
                 <header>
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
@@ -72,7 +61,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark {
       nodes {
         excerpt
         fields {
@@ -82,6 +71,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          image
         }
       }
     }

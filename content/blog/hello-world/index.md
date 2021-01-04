@@ -2,6 +2,7 @@
 title: hello
 date: 2015-05-01T22:12:03.284Z
 description: hello world
+image : img/promotion-banner.jpg
 ---
 
 This is my first post on my new fake blog! How exciting!
